@@ -1,11 +1,11 @@
-# `<SKILL NAME>`
+# `MW YTF`
 
 ## Quickstart
 
-Install `<SKILL_NAME>` with yarn​:
+Install `MW YTF` with yarn​:
 
 ```bash
-  cd `<SKILL_NAME>`
+  cd `skill-mw-ytf`
   yarn
   yarn start
 ```
@@ -20,11 +20,10 @@ Install `<SKILL_NAME>` with yarn​:
 
 ## Skill trigger
 
-- Credentials (if needed or link into 1password)
-- Steps to trigger (describe in steps how to receive a trigger add link):
-- go to https://trigger.page.com (main page)​
+- [Credentials](https://start.1password.com/open/i?a=KBXK36HQOFATFGS55MUTEP54XM&h=matterway.1password.com&i=tcwoz4g7xxfyxmq46faeywn5i4&v=vyzebl4klpdt6t6ttafsctogze)
+- Steps to trigger:
+  - go to https://yetiforce.matterway.io/index.php
 
 ## Additional Notes​
 
-- Coda: [Link to Coda]()
-- Design: [Link to Designer]()
+- Design: [Link to Designer](https://designer.matterway.io/skill/35e97485-89bc-4f77-b306-e6162921c5f8/main/flow/to-be/v3?action=trigger&view=snapshot)
