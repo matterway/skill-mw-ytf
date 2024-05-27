@@ -1,9 +1,17 @@
-import {SDKFile, convertBase64ToBuffer, type Context} from '@matterway/sdk';
+import {
+  SDKFile,
+  convertBase64ToBuffer,
+  showProgress,
+  type Context,
+} from '@matterway/sdk';
 import {Workbook} from 'exceljs';
+import {t} from 'i18next';
 import {isEmpty} from 'lodash-es';
 
 export async function extractFileDataStep(ctx: Context, excelFile: SDKFile) {
   console.log('step: extractFileDataStep', {excelFile});
+
+  await showProgress(ctx, t('progress.fetchData'));
 
   const fileBuffer = convertBase64ToBuffer(excelFile.data);
   const workbook = await new Workbook().xlsx.load(fileBuffer);
