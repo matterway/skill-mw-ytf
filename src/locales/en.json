@@ -12,5 +12,17 @@
     "subtitle": "Oops. Something went wrong",
     "text": "Assistant has encountered unexpected circumstances, and is unable to proceed. The following error message will help support investigate the issue: {{err}}",
     "dismissButton": "Dismiss"
+  },
+  "uploadFile": {
+    "title": "Upload project file",
+    "description": "Create entries for your favorite project 😉",
+    "text": "Upload at most one Excel spreadsheet with information on upcoming projects.",
+    "uploadButton": "Browse from Disk...",
+    "loadingText": "Validating file",
+    "error": "File is invalid",
+    "invalidFormat": "Invalid format.",
+    "emptyFile": "Worksheet is empty",
+    "noData": "The sheet has no data",
+    "submit": "Submit"
   }
 }
