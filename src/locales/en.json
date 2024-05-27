@@ -4,7 +4,7 @@
     "proceedButton": "Let's go!"
   },
   "success": {
-    "subtitle": "Task processed successfully",
+    "subtitle": "Your task is complete!",
     "text": "The request has been processed successfully. You can now dismiss Assistant and work on a new task.",
     "successButton": "Thank you"
   },

@@ -12,4 +12,8 @@ export const SELECTORS = {
     xProjectsBreadcrumb:
       '//li[@class="breadcrumb-item u-text-ellipsis"]//a[contains(text(), "Projects")]',
   },
+  highlightCreatedEntries: {
+    xProjectName: (projectName: string) =>
+      `//table[contains(@class, 'listViewActive')]//a[contains(text(), "${projectName}")]`,
+  },
 };
