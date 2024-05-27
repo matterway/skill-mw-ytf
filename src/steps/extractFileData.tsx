@@ -20,18 +20,12 @@ export async function extractFileDataStep(ctx: Context, excelFile: SDKFile) {
   const data = worksheet.getRows(2, worksheet.rowCount);
   const extractedData = data
     ?.map((row) => ({
-      projectName: row.getCell(1).value,
-      startDate: row.getCell(2).value,
-      targetEndDate: row.getCell(3).value,
-      budget: row.getCell(4).value,
+      projectName: row.getCell(1).value?.toString() || '',
+      startDate: row.getCell(2).value?.toString() || '',
+      targetEndDate: row.getCell(3).value?.toString() || '',
+      budget: row.getCell(4).value?.toString() || '',
     }))
-    .filter(
-      (obj) =>
-        !isEmpty(obj.projectName) ||
-        !isEmpty(obj.startDate) ||
-        !isEmpty(obj.targetEndDate) ||
-        !isEmpty(obj.budget),
-    );
+    .filter((obj) => !isEmpty(obj.projectName));
 
   console.log('step: extractFileDataStep end', {extractedData});
   return extractedData;

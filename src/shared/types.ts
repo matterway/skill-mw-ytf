@@ -5,3 +5,10 @@ export interface SkillData {
   // Example data
   id: number;
 }
+
+export interface Entry {
+  projectName: string;
+  startDate?: string;
+  targetEndDate?: string;
+  budget?: string;
+}

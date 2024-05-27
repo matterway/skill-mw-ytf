@@ -3,6 +3,7 @@ import {successStep} from 'steps/@success';
 import {uploadFileStep} from './uploadFile';
 import {extractFileDataStep} from './extractFileData';
 import {navigateToProjectManagementStep} from './navigateToProjectManagement';
+import {createEntriesStep} from './createEntries';
 
 export async function startStep(ctx: Context) {
   console.log('step: startStep');
@@ -10,8 +11,9 @@ export async function startStep(ctx: Context) {
   const uploadedFile = await uploadFileStep(ctx);
 
   if (uploadedFile !== null) {
-    const _excelData = await extractFileDataStep(ctx, uploadedFile);
+    const excelData = await extractFileDataStep(ctx, uploadedFile);
     await navigateToProjectManagementStep(ctx);
+    await createEntriesStep(ctx, excelData ?? []);
   }
 
   await successStep(ctx);
