@@ -1,16 +1,19 @@
-// Keep shared selectors here,
-export const SELECTORS = {};
-
-/**
- * @example
- *
- * export const SELECTORS = {
- *   loader: {
- *     materialNumberLabel: '#userarea-scrl-cnt > div > div:first-child label span',
- *     materialNumberInput: 'input[title="Material Number"]',
- *   },
- *   xPurchDocTableCell: '//table//tr//span[text()="Purch.Doc."]',
- *   xCurrencyInput: '//span[contains(text(), "Targ. Val.")]//following::input[2]',
- *   xTranslatedSpan: (title: string) => `//span[contains(text(), ${title}`,
- * };
- */
+export const SELECTORS = {
+  navigateToProjectManagement: {
+    projects: 'span[title="Projects"]',
+    xAddRecordsBtn: '//a[contains(text(), "Add record")]',
+  },
+  createEntries: {
+    projectName: '[name="projectname"]',
+    startDate: '[name="startdate"]',
+    targetEndDate: '[name="targetenddate"]',
+    budget: '[name="targetbudget"]',
+    xSaveBtn: '//button//*[contains(text(), "Save")]',
+    xProjectsBreadcrumb:
+      '//li[@class="breadcrumb-item u-text-ellipsis"]//a[contains(text(), "Projects")]',
+  },
+  highlightCreatedEntries: {
+    xProjectName: (projectName: string) =>
+      `//table[contains(@class, 'listViewActive')]//a[contains(text(), "${projectName}")]`,
+  },
+};
