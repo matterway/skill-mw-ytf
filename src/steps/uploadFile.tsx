@@ -57,5 +57,5 @@ export async function uploadFileStep(ctx: Context) {
   }
 
   console.log('step: uploadFileStep end', files[0]);
-  return {excelFile: files[0]};
+  return files[0];
 }
