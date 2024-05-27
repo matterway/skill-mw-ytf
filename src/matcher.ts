@@ -19,7 +19,7 @@ export default function matcher(
     return true;
   }
 
-  const triggerUrl = 'example.com';
+  const triggerUrl = 'https://yetiforce.matterway.io/index';
 
   const matcherResult =
     window.location.href.includes(triggerUrl) && skillEnv.tag === 'local';
