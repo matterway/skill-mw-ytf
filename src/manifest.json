@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "identifier": "@matterway/ytf",
+  "identifier": "@onboarding/ytf",
   "name": "Yeti Force Projects",
   "description": "Create entries for your favorites projects",
   "name_de": "Yeti Force Projects",
