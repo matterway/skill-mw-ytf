@@ -22,7 +22,7 @@ Install `MW YTF` with yarn​:
 
 - [Credentials](https://start.1password.com/open/i?a=KBXK36HQOFATFGS55MUTEP54XM&h=matterway.1password.com&i=tcwoz4g7xxfyxmq46faeywn5i4&v=vyzebl4klpdt6t6ttafsctogze)
 - Steps to trigger:
-  - go to https://yetiforce.matterway.io/index.php
+  - go to https://yetiforce.matterway.io/index.php?module=Home&view=DashBoard
 
 ## Additional Notes​
 

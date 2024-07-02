@@ -19,7 +19,8 @@ export default function matcher(
     return true;
   }
 
-  const triggerUrl = 'https://yetiforce.matterway.io/index';
+  const triggerUrl =
+    'https://yetiforce.matterway.io/index.php?module=Home&view=DashBoard';
 
   const matcherResult =
     window.location.href.includes(triggerUrl) && skillEnv.tag === 'local';
