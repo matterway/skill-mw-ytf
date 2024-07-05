@@ -33,4 +33,3 @@ root.render(
     </DesignSystemRoot>
   </ThemeContextProvider>,
 );
-
