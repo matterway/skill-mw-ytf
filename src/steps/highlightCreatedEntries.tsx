@@ -1,4 +1,4 @@
-import {highlightXPath, type Context} from '@matterway/sdk';
+import {highlightElement, type Context} from '@matterway/sdk';
 import {isEmpty} from 'lodash-es';
 import {SELECTORS} from 'shared/selectors';
 import {Entry} from 'shared/types';
@@ -36,10 +36,9 @@ export async function highlightCreatedEntriesStep(
 
   await Promise.all(
     highlightedPromises.map((selector) => {
-      return highlightXPath(ctx, selector);
+      return highlightElement(ctx, selector, {color: '#DB2351'});
     }),
   );
 
   console.log('step: highlightCreatedEntriesStep end');
-  return highlightedPromises;
 }

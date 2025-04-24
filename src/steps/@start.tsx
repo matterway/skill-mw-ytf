@@ -11,13 +11,12 @@ export async function startStep(ctx: Context) {
 
   const uploadedFile = await uploadFileStep(ctx);
 
-  let highlights: string[] = [];
   if (uploadedFile !== null) {
     const excelData = await extractFileDataStep(ctx, uploadedFile);
     await navigateToProjectManagementStep(ctx);
     await createEntriesStep(ctx, excelData);
-    highlights = await highlightCreatedEntriesStep(ctx, excelData);
+    await highlightCreatedEntriesStep(ctx, excelData);
   }
 
-  await successStep(ctx, highlights);
+  await successStep(ctx);
 }
