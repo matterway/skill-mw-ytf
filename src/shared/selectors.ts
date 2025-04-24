@@ -14,6 +14,6 @@ export const SELECTORS = {
   },
   highlightCreatedEntries: {
     xProjectName: (projectName: string) =>
-      `//table[contains(@class, 'listViewActive')]//a[contains(text(), "${projectName}")]`,
+      `//table[contains(@class, 'listViewEntriesTable')]//a[contains(text(), "${projectName}")]`,
   },
 };
