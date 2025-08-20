@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@matterway/sdk": "^1.4.21",
+    "@matterway/sdk": "^1.31.4",
     "@matterway/skill-scripts": "^11.102.6",
     "dayjs": "^1.11.11",
     "exceljs": "^4.4.0",
