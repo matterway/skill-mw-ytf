@@ -11,12 +11,10 @@ export async function startStep(ctx: Context) {
 
   const uploadedFile = await uploadFileStep(ctx);
 
-  if (uploadedFile !== null) {
-    const excelData = await extractFileDataStep(ctx, uploadedFile);
-    await navigateToProjectManagementStep(ctx);
-    await createEntriesStep(ctx, excelData);
-    await highlightCreatedEntriesStep(ctx, excelData);
-  }
+  const excelData = await extractFileDataStep(ctx, uploadedFile);
+  await navigateToProjectManagementStep(ctx);
+  await createEntriesStep(ctx, excelData);
+  await highlightCreatedEntriesStep(ctx, excelData);
 
   await successStep(ctx);
 }

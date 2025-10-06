@@ -1,5 +1,6 @@
 import type {Context} from '@matterway/sdk';
-import {removeAllHighlights, showSuccessNotice} from '@matterway/sdk';
+import {removeAllHighlights} from '@matterway/sdk';
+import {showUI} from '@matterway/sdk/lib/UIv2';
 import {t} from 'i18next';
 
 // You can duplicate this step to represent different endings for this task
@@ -10,12 +11,9 @@ export async function successStep(ctx: Context) {
 
   // Only add logic here if it is performing closure specific to this ending
 
-  await showSuccessNotice(ctx, {
-    title: '',
-    description: '',
+  await showUI.success(ctx, {
     text: '',
-    subtitle: t('success.subtitle'),
-    icon: 'checkmark-circle-outline',
+    title: t('success.subtitle'),
   });
 
   await removeAllHighlights();

@@ -1,21 +1,16 @@
-import {
-  SDKFile,
-  convertBase64ToBuffer,
-  showProgress,
-  type Context,
-} from '@matterway/sdk';
+import {MwFile, type Context} from '@matterway/sdk';
+import {showUI} from '@matterway/sdk/lib/UIv2';
 import {Workbook} from 'exceljs';
 import {t} from 'i18next';
 import {isEmpty} from 'lodash-es';
 import {Entry} from 'shared/types';
 
-export async function extractFileDataStep(ctx: Context, excelFile: SDKFile) {
+export async function extractFileDataStep(ctx: Context, excelFile: MwFile) {
   console.log('step: extractFileDataStep', {excelFile});
 
-  await showProgress(ctx, t('progress.fetchData'));
+  void showUI.progress(ctx, t('progress.fetchData'), {overlay: true});
 
-  const fileBuffer = convertBase64ToBuffer(excelFile.data);
-  const workbook = await new Workbook().xlsx.load(fileBuffer);
+  const workbook = await new Workbook().xlsx.load(excelFile.arrayBuffer);
   const worksheet = workbook.worksheets[0];
 
   const data = worksheet.getRows(2, worksheet.rowCount);

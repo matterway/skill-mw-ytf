@@ -1,15 +1,11 @@
-import {
-  click,
-  showProgress,
-  waitForSelector,
-  type Context,
-} from '@matterway/sdk';
+import {click, waitForSelector, type Context} from '@matterway/sdk';
+import {showUI} from '@matterway/sdk/lib/UIv2';
 import {t} from 'i18next';
 import {SELECTORS} from 'shared/selectors';
 
 export async function navigateToProjectManagementStep(ctx: Context) {
   console.log('step: navigateToProjectManagementStep');
-  await showProgress(ctx, t('progress.createData'));
+  void showUI.progress(ctx, t('progress.createData'), {overlay: true});
 
   const {projects, xAddRecordsBtn} = SELECTORS.navigateToProjectManagement;
 
