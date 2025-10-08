@@ -4,8 +4,8 @@ import {
   waitForSelector,
   type Context,
   setValue,
-  showProgress,
 } from '@matterway/sdk';
+import {showUI} from '@matterway/sdk/lib/UIv2';
 import {SELECTORS} from 'shared/selectors';
 import {Entry} from 'shared/types';
 import dayjs from 'dayjs';
@@ -14,7 +14,7 @@ import {isEmpty} from 'lodash-es';
 
 export async function createEntriesStep(ctx: Context, excelData: Entry[]) {
   console.log('step: createEntriesStep', excelData);
-  await showProgress(ctx, t('progress.createData'));
+  void showUI.progress(ctx, t('progress.createData'), {overlay: true});
 
   const {
     navigateToProjectManagement: {xAddRecordsBtn},
@@ -38,16 +38,16 @@ export async function createEntriesStep(ctx: Context, excelData: Entry[]) {
       const formattedEndDate = dayjs(entry.targetEndDate).format('YYYY-MM-DD');
 
       await clickByXPath(ctx, xAddRecordsBtn);
-      await showProgress(ctx, t('progress.createData'));
+      void showUI.progress(ctx, t('progress.createData'), {overlay: true});
       await waitForSelector(ctx, projectName);
       await fill(ctx, projectName, entry.projectName);
       await setValue(ctx, startDate, formattedDate);
       await setValue(ctx, targetEndDate, formattedEndDate);
       await fill(ctx, budget, String(entry.budget));
       await clickByXPath(ctx, xSaveBtn);
-      await showProgress(ctx, t('progress.createData'));
+      void showUI.progress(ctx, t('progress.createData'), {overlay: true});
       await clickByXPath(ctx, xProjectsBreadcrumb);
-      await showProgress(ctx, t('progress.createData'));
+      void showUI.progress(ctx, t('progress.createData'), {overlay: true});
     }
   }
 
