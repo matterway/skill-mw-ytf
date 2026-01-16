@@ -20,9 +20,9 @@ Install `MW YTF` with yarn​:
 
 ## Skill trigger
 
-- [Credentials](https://start.1password.com/open/i?a=KBXK36HQOFATFGS55MUTEP54XM&h=matterway.1password.com&i=tcwoz4g7xxfyxmq46faeywn5i4&v=vyzebl4klpdt6t6ttafsctogze)
+- [Credentials](https://start.1password.com/open/i?a=7QPYBRHKB5DMFLEGWC7UKC2KTY&v=w2onx6cepu4r57526mfppb2kw4&i=3nktfqg5iwwpf6qkyktitw4c7i&h=cognizant.1password.eu)
 - Steps to trigger:
-  - go to https://yetiforce.matterway.io/index.php?module=Home&view=DashBoard
+  - go to https://yetiforce-demos.matterway.io/index.php?module=Home&view=DashBoard
   - navigate to the Dashboard page from sidebar under Virtual Desk.
 
 ## Additional Notes​

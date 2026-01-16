@@ -17,7 +17,7 @@ export default function matcher(window: Window): MatcherResult {
   }
 
   const triggerUrl =
-    'https://yetiforce.matterway.io/index.php?module=Home&view=DashBoard';
+    'https://yetiforce-demos.matterway.io/index.php?module=Home&view=DashBoard';
 
   const matcherResult = window.location.href.includes(triggerUrl);
   console.debug(`${manifest.name} matcher result:`, matcherResult);
