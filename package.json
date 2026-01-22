@@ -8,7 +8,7 @@
     "dayjs": "^1.11.11",
     "exceljs": "^4.4.0",
     "i18next": "^22.4.15",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.2",
